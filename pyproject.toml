@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mathstack"
+version = "3.0.0"
+description = "MathCore Advanced - Advanced Mathematics Library with zero external dependencies. Includes symbolic algebra, geometry, calculus, statistics, optimization, probability distributions, complex numbers, and differential equation solvers."
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "MathCore Contributors", email = "info@mathcore.dev"}
+]
+keywords = [
+    "mathematics",
+    "algebra",
+    "geometry",
+    "calculus",
+    "symbolic",
+    "polynomial",
+    "matrix",
+    "linear-algebra",
+    "advanced-math",
+    "scientific-computing",
+    "statistics",
+    "optimization",
+    "no-dependencies",
+    "pure-python"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/mathcore/mathcore"
+Documentation = "https://mathcore.readthedocs.io"
+Repository = "https://github.com/mathcore/mathcore.git"
+Issues = "https://github.com/mathcore/mathcore/issues"
+
+[tool.setuptools]
+packages = ["mathcore", "mathcore.core", "mathcore.utils", "mathcore.statistics", 
+           "mathcore.optimization", "mathcore.complex",
+           "mathcore.probability", "mathcore.differential"]
+
+[tool.setuptools.package-data]
+mathcore = ["py.typed"]
