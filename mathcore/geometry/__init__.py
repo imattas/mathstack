@@ -14,7 +14,12 @@ from .transformations import rotate_point, translate_point, reflect_point, scale
 from .transformations import rotate_shape, translate_shape, reflect_shape, scale_shape
 from .calculations import distance, midpoint, angle_between, area_triangle
 from .calculations import point_to_line_distance, line_slope, line_intercept
-from .intersections import find_line_intersection, circle_line_intersection, circle_circle_intersection
+from .intersections import (
+    find_line_intersection,
+    line_collision_detection,
+    circle_line_intersection,
+    circle_circle_intersection,
+)
 
 __all__ = [
     'Point', 'Vector', 'Line', 'Circle', 'Triangle', 'Polygon', 'Rectangle',
@@ -22,5 +27,6 @@ __all__ = [
     'rotate_shape', 'translate_shape', 'reflect_shape', 'scale_shape',
     'distance', 'midpoint', 'angle_between', 'area_triangle',
     'point_to_line_distance', 'line_slope', 'line_intercept',
-    'find_line_intersection', 'circle_line_intersection', 'circle_circle_intersection',
+    'find_line_intersection', 'line_collision_detection',
+    'circle_line_intersection', 'circle_circle_intersection',
 ]

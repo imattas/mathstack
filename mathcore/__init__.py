@@ -17,7 +17,7 @@ A powerful, zero-dependency library for advanced mathematical operations includi
 - Step-by-step work display for all operations
 """
 
-__version__ = "3.1.0"
+__version__ = "3.2.0"
 __author__ = "MathCore Contributors"
 __license__ = "MIT"
 
@@ -38,7 +38,7 @@ from mathcore.geometry import (
     Point, Line, Circle, Triangle, Vector, Polygon, Rectangle,
     find_line_intersection, distance, midpoint,
     line_collision_detection, circle_line_intersection, point_to_line_distance,
-    angle_between, area_triangle, line_slope, line_intercept,
+    angle_between, area_triangle, line_slope, line_slope as slope, line_intercept,
     rotate_point, translate_point, reflect_point, scale_point,
     rotate_shape, translate_shape, reflect_shape, scale_shape,
     circle_circle_intersection
@@ -161,6 +161,24 @@ from mathcore.differential.boundary_value import (
 )
 
 # ---------------------------------------------------------------------------
+# Trigonometry
+# ---------------------------------------------------------------------------
+from mathcore.trigonometry import (
+    sin, cos, tan, csc, sec, cot,
+    asin, acos, atan,
+    radians, degrees,
+    normalize_angle_radians, normalize_angle_degrees,
+    unit_circle_point, taylor_sin, taylor_cos,
+    pythagorean_hypotenuse, pythagorean_leg,
+    law_of_sines_side, law_of_sines_angle,
+    law_of_cosines_side, law_of_cosines_angle,
+    triangle_area_sas, triangle_area_heron,
+    verify_pythagorean_identity,
+    verify_sum_difference_identity,
+    verify_double_angle_identity
+)
+
+# ---------------------------------------------------------------------------
 # Utils
 # ---------------------------------------------------------------------------
 from mathcore.utils.step_display import (
@@ -178,9 +196,13 @@ __all__ = [
     'Polynomial', 'simplify', 'solve_quadratic', 'solve_cubic',
     'factor_expression', 'expand_expression',
     # Geometry
-    'Point', 'Line', 'Circle', 'Triangle', 'Vector',
-    'find_line_intersection', 'distance', 'midpoint', 'slope',
+    'Point', 'Line', 'Circle', 'Triangle', 'Vector', 'Polygon', 'Rectangle',
+    'find_line_intersection', 'distance', 'midpoint', 'slope', 'line_slope', 'line_intercept',
     'line_collision_detection', 'circle_line_intersection', 'point_to_line_distance',
+    'angle_between', 'area_triangle',
+    'rotate_point', 'translate_point', 'reflect_point', 'scale_point',
+    'rotate_shape', 'translate_shape', 'reflect_shape', 'scale_shape',
+    'circle_circle_intersection',
     # Calculus
     'derivative', 'integral', 'limit', 'series_expansion',
     'find_critical_points', 'second_derivative_test',
@@ -257,6 +279,19 @@ __all__ = [
     'finite_difference_bvp', 'finite_difference_bvp_nonlinear',
     'fem_1d', 'sturm_liouville_eigenvalues',
     'chebyshev_collocation', 'greens_function_bvp',
+    # Trigonometry
+    'sin', 'cos', 'tan', 'csc', 'sec', 'cot',
+    'asin', 'acos', 'atan',
+    'radians', 'degrees',
+    'normalize_angle_radians', 'normalize_angle_degrees',
+    'unit_circle_point', 'taylor_sin', 'taylor_cos',
+    'pythagorean_hypotenuse', 'pythagorean_leg',
+    'law_of_sines_side', 'law_of_sines_angle',
+    'law_of_cosines_side', 'law_of_cosines_angle',
+    'triangle_area_sas', 'triangle_area_heron',
+    'verify_pythagorean_identity',
+    'verify_sum_difference_identity',
+    'verify_double_angle_identity',
     # Utils
     'StepTracker', 'SimplificationTracker', 'CalculationTracker',
     'EquationSolver', 'ArithmeticSteps', 'ProbabilitySolver',
