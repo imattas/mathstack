@@ -8,17 +8,16 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="mathstack",
-    version="3.2.0",
+    version="3.2.1",
     author="MathCore Contributors",
     author_email="info@mathcore.dev",
     description="Advanced mathematics library with zero external dependencies - symbolic algebra, geometry, calculus, statistics, optimization, and more",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/mathcore/mathcore",
+    url="https://github.com/imattas/mathstack",
     project_urls={
-        "Bug Tracker": "https://github.com/mathcore/mathcore/issues",
-        "Documentation": "https://mathcore.readthedocs.io",
-        "Source Code": "https://github.com/mathcore/mathcore",
+        "Bug Tracker": "https://github.com/imattas/mathstack/issues",
+        "Source Code": "https://github.com/imattas/mathstack",
     },
     packages=find_packages(),
     classifiers=[
@@ -26,7 +25,6 @@ setup(
         "Intended Audience :: Developers",
         "Intended Audience :: Education",
         "Intended Audience :: Science/Research",
-        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",

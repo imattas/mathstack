@@ -17,7 +17,7 @@ A powerful, zero-dependency library for advanced mathematical operations includi
 - Step-by-step work display for all operations
 """
 
-__version__ = "3.2.0"
+__version__ = "3.2.1"
 __author__ = "MathCore Contributors"
 __license__ = "MIT"
 
