@@ -53,17 +53,20 @@ except ValueError:
     origin = repo.create_remote('origin', GITHUB_URL)
     print(f"✓ Remote created: {GITHUB_URL}")
 
-# Set up tracking branch
-try:
-    repo.heads[GITHUB_BRANCH].set_tracking_branch(origin.refs[GITHUB_BRANCH])
-    print(f"✓ Branch '{GITHUB_BRANCH}' tracking origin/{GITHUB_BRANCH}")
-except (IndexError, AttributeError):
-    print(f"ℹ️  Setting up branch '{GITHUB_BRANCH}' for first push...")
+# Determine current branch
+current_branch = repo.active_branch.name
+print(f"📍 Current branch: {current_branch}")
+
+# If we need to push to a different branch, rename or create it
+if current_branch != GITHUB_BRANCH:
+    print(f"🔄 Renaming branch from '{current_branch}' to '{GITHUB_BRANCH}'...")
+    repo.active_branch.rename(GITHUB_BRANCH)
+    print(f"✓ Branch renamed to '{GITHUB_BRANCH}'")
 
 # Push to GitHub
 print(f"🚀 Pushing to {GITHUB_URL}#{GITHUB_BRANCH}...")
 try:
-    origin.push(GITHUB_BRANCH, force=False)
+    origin.push(GITHUB_BRANCH, force=True)
     print(f"✓ Successfully pushed to origin/{GITHUB_BRANCH}")
 except Exception as e:
     print(f"⚠️  Push attempt: {str(e)}")
