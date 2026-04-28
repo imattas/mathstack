@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mathstack"
-version = "3.0.0"
+version = "3.1.0"
 description = "MathCore Advanced - Advanced Mathematics Library with zero external dependencies. Includes symbolic algebra, geometry, calculus, statistics, optimization, probability distributions, complex numbers, and differential equation solvers."
 readme = "README.md"
 requires-python = ">=3.7"

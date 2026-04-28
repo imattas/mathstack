@@ -8,7 +8,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="mathstack",
-    version="3.0.0",
+    version="3.1.0",
     author="MathCore Contributors",
     author_email="info@mathcore.dev",
     description="Advanced mathematics library with zero external dependencies - symbolic algebra, geometry, calculus, statistics, optimization, and more",

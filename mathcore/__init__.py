@@ -17,7 +17,7 @@ A powerful, zero-dependency library for advanced mathematical operations includi
 - Step-by-step work display for all operations
 """
 
-__version__ = "3.0.0"
+__version__ = "3.1.0"
 __author__ = "MathCore Contributors"
 __license__ = "MIT"
 
@@ -34,10 +34,14 @@ from mathcore.core.algebra import (
     Polynomial, simplify, solve_quadratic, solve_cubic,
     factor_expression, expand_expression
 )
-from mathcore.core.geometry import (
-    Point, Line, Circle, Triangle, Vector,
-    find_line_intersection, distance, midpoint, slope,
-    line_collision_detection, circle_line_intersection, point_to_line_distance
+from mathcore.geometry import (
+    Point, Line, Circle, Triangle, Vector, Polygon, Rectangle,
+    find_line_intersection, distance, midpoint,
+    line_collision_detection, circle_line_intersection, point_to_line_distance,
+    angle_between, area_triangle, line_slope, line_intercept,
+    rotate_point, translate_point, reflect_point, scale_point,
+    rotate_shape, translate_shape, reflect_shape, scale_shape,
+    circle_circle_intersection
 )
 from mathcore.core.calculus import (
     derivative, integral, limit, series_expansion,
